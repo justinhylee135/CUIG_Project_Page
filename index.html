@@ -25,7 +25,7 @@
 
 
   <title>CUIG</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/SecondaryFigure.jpg">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -125,22 +125,39 @@
 </section>
 
 
-<!-- Teaser video-->
-<!-- <section class="hero teaser">
+<!-- Main Figures -->
+ <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <!-- <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/images/SecondaryFigure.jpg" alt="Main figure showing sequential vs simultaneous unlearning comparison">
+          </figure>
+          <h2 class="subtitle has-text-centered">
+            In real-world applications, unlearning requests often arrive <strong>sequentially</strong>. For example, when artists request the removal of their style or companies request the removal of copyrighted characters.
+          </h2>
+        </div>
+      </div>
     </div>
   </div>
-</section> --> -->
-<!-- End teaser video -->
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/images/MainFigure.png" alt="Main figure showing sequential vs simultaneous unlearning comparison">
+          </figure>
+          <h2 class="subtitle has-text-centered">
+            Unlearning a concept from the previously unlearned model checkpoint, leads to <strong>model degradation</strong>, the unintentional unlearning of other concepts. This occurs for unlearning both styles (left) and objects (right).
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -159,107 +176,201 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item"> -->
-        <!-- Your image here -->
-        <!-- <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<!-- Section 1 -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Sequential vs Simultaneous</h2>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-half has-text-centered">
+        <figure class="image">
+          <img src="static/images/ca_style_seq_vs_sim.jpg" alt="Style: Sequential vs Simultaneous Unlearning" style="max-width:100%;height:auto;">
+        </figure>
+        <p class="subtitle is-6">Unlearning 12 Styles</p>
       </div>
-      <div class="item"> -->
-        <!-- Your image here -->
-        <!-- <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+      <div class="column is-half has-text-centered">
+        <figure class="image">
+          <img src="static/images/ca_object_seq_vs_sim.jpg" alt="Object: Sequential vs Simultaneous Unlearning" style="max-width:100%;height:auto;">
+        </figure>
+        <p class="subtitle is-6">Unlearning 12 Objects</p>
       </div>
-      <div class="item"> -->
-        <!-- Your image here -->
-        <!-- <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item"> -->
-      <!-- Your image here -->
-      <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+    </div>
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <p class="is-size-5" style="margin-top: 1em;">
+          Unlearning sequentially leads to faster model degradation compared to unlearning simultaneously. Sequential unlearns from the previous checkpoint while simultaneous, restarts from the base model and unlearns all requests (previous + current).
+        </p>
+      </div>
     </div>
   </div>
-</div>
-</div>
-</section> -->
-<!-- End image carousel -->
+</section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-half has-text-centered">
+        <figure class="image" style="max-width: 300px; margin: 0 auto;">
+          <img src="static/images/training_costs.png" alt="Training Costs" style="width:100%; height:auto;">
+        </figure>
+        <p class="subtitle is-4">Simultaneous unlearning requires significantly more resources.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      Paper video.
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video"> -->
-            <!-- Youtube embed code here -->
-            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+          <figure class="image">
+            <img src="static/images/ca_object_map.png" alt="Main figure showing sequential vs simultaneous unlearning comparison">
+          </figure>
+            <h2 class="subtitle has-text-centered">
+            We find that simultaneous unlearning uses much smaller parameter updates. The x-axis shows the parameters updated during unlearning, with more red indicating a greater L2 distance from the base model parameters. This motivates us to explore methods that constrain update magnitude.
+            </h2>
         </div>
       </div>
     </div>
   </div>
-</section> --> 
-<!-- End youtube video -->
+</section>
 
 
-<!-- Video carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
-            <!-- Your video file here -->
-            <!-- <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
-            <!-- Your video file here -->
-            <!-- <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\ -->
-            <!-- Your video file here -->
-            <!-- <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+<!-- Section 2 -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Exploring Methods to Constrain Update Magnitude</h2>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/images/ConstrainUpdateMethods.jpg" alt="Main figure showing sequential vs simultaneous unlearning comparison">
+          </figure>
+            <h2 class="subtitle has-text-centered">
+            Methods to constrain update magnitude. We explore regularizers (L1/L2) with respect to the previous checkpoint. Selective Finetuning which chooses a small subset of parameters to update based off one forward pass of the unlearning loss. TIES Model Merging which independently unlearns each request, prunes the checkpoint, and merges the weights.
+            </h2>
         </div>
       </div>
     </div>
   </div>
-</section> -->
-<!-- End video carousel -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- First row -->
+    <div class="columns is-centered">
+      <div class="column is-half has-text-centered">
+        <figure class="image">
+          <img src="static/images/initial_results_style.jpg" alt="Style: Sequential vs Simultaneous Unlearning" style="max-width:100%;height:auto;">
+        </figure>
+        <p class="subtitle is-6">Unlearning 12 Styles</p>
+      </div>
+      <div class="column is-half has-text-centered">
+        <figure class="image">
+          <img src="static/images/initial_results_object.jpg" alt="Object: Sequential vs Simultaneous Unlearning" style="max-width:100%;height:auto;">
+        </figure>
+        <p class="subtitle is-6">Unlearning 12 Objects</p>
+      </div>
+    </div>
+    <!-- Second row -->
+    <div class="columns is-centered">
+      <div class="column is-half has-text-centered">
+        <figure class="image">
+          <img src="static/images/Style_Qual.jpg" alt="Qualitative Results: Styles" style="max-width:100%;height:auto;">
+        </figure>
+        <p class="subtitle is-6">Qualitative Results: Styles</p>
+      </div>
+      <div class="column is-half has-text-centered">
+        <figure class="image">
+          <img src="static/images/Object_Qual.jpg" alt="Qualitative Results: Objects" style="max-width:100%;height:auto;">
+        </figure>
+        <p class="subtitle is-6">Qualitative Results: Objects</p>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <p class="is-size-5" style="margin-top: 1em;">
+          We see strong improvements to retaining the cross-domain. When unlearning style we do well retaining objects and vice versa. It seems disentangling concepts within the same domain is a harder challenge.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Developing New Methods</h2>
+  </div>
+</section>
 
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/images/cosine_similarity.png" alt="Main figure showing sequential vs simultaneous unlearning comparison">
+          </figure>
+            <h2 class="subtitle has-text-centered">
+            Unlearning methods typically update just the cross attention layers to minimize model degradation. Understanding that cross-attention is the relationship between text and images, we find that text embedding cosine similarity with the target concept (e.g. Abstractionism Style) is a strong indicator for which concepts will be unintentionally unlearned.
+            </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/images/gradient_projection.jpg" alt="Main figure showing sequential vs simultaneous unlearning comparison">
+          </figure>
+            <h2 class="subtitle has-text-centered">
+            We develop a new method that builds a text embedding subspace of concepts we want to retain. Then we project the unelarning gradient to be orthogonal to this subspace. This allows us to unlearn the target concept while retaining the concepts we want to keep.
+            </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-half has-text-centered">
+        <figure class="image">
+          <img src="static/images/style_grad_project.png" alt="Style: Sequential vs Simultaneous Unlearning" style="max-width:100%;height:auto;">
+        </figure>
+        <p class="subtitle is-6">Unlearning 12 Styles</p>
+      </div>
+      <div class="column is-half has-text-centered">
+        <figure class="image">
+          <img src="static/images/object_grad_project.png" alt="Object: Sequential vs Simultaneous Unlearning" style="max-width:100%;height:auto;">
+        </figure>
+        <p class="subtitle is-6">Unlearning 12 Objects</p>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <p class="is-size-5" style="margin-top: 1em;">
+          Using our projection method we see strong improvements to retaining within-domain concepts.
+      </div>
+    </div>
+  </div>
+</section>
 
-
-
+<!-- Section 4-->
 <!-- Paper poster -->
 <section class="hero is-small is-light">
   <div class="hero-body">
@@ -273,6 +384,7 @@
     </div>
   </section>
 <!--End paper poster -->
+
 
 
 <!--BibTex citation -->
