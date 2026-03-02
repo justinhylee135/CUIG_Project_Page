@@ -2,43 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="description" content="Continual Unlearning for Text-to-Image Diffusion Models: A Regularization Perspective (ICLR 2026).">
+  <meta property="og:title" content="Continual Unlearning for Text-to-Image Diffusion Models">
+  <meta property="og:description" content="ICLR 2026 camera-ready paper and figures for continual unlearning in text-to-image diffusion models.">
+  <meta property="og:url" content="https://justinhylee135.github.io/CUIG_Project_Page/">
+  <meta property="og:image" content="static/images/unlearning_teaser_updated_cropped.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:title" content="Continual Unlearning for Text-to-Image Diffusion Models">
+  <meta name="twitter:description" content="ICLR 2026 camera-ready project page.">
+  <meta name="twitter:image" content="static/images/unlearning_teaser_updated_cropped.png">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="continual unlearning, diffusion models, text-to-image, model editing, machine unlearning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <title>CUIG</title>
-  <link rel="icon" type="image/x-icon" href="static/images/gradient_projection.jpg">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <title>CUIG - ICLR 2026</title>
+  <link rel="icon" type="image/png" href="static/images/ideal_outcomes_updated.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
@@ -46,75 +35,45 @@
 </head>
 <body>
 
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Continual Unlearning for Text-to-Image Diffusion Models:<br>A Regularization Perspective</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://justinhylee135.github.io/" target="_blank">Justin Lee</a><sup>1*</sup>,</span>
+            <span class="author-block"><a href="https://zheda-mai.github.io/" target="_blank">Zheda Mai</a><sup>1*</sup>,</span>
+            <span class="author-block"><a href="https://jinsuyoo.info/" target="_blank">Jinsu Yoo</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://a-f1.github.io/" target="_blank">Chongyu Fan</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://czhang0528.github.io/" target="_blank">Cheng Zhang</a><sup>3</sup>,</span>
+            <span class="author-block"><a href="https://sites.google.com/view/wei-lun-harry-chao" target="_blank">Wei-Lun Chao</a><sup>1,4</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>The Ohio State University</span>,
+            <span class="author-block"><sup>2</sup>Michigan State University</span>,
+            <span class="author-block"><sup>3</sup>Texas A&amp;M University</span>,
+            <span class="author-block"><sup>4</sup>Boston University</span><br>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal Contribution</span>
+            <br>
+            <span class="author-block">{lee.10369, mai.145}@osu.edu</span>
+          </div>
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">An Empirical Exploration of <br>Continual Unlearning for Image Generation</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://justinhylee135.github.io/" target="_blank">Justin Lee</a><sup></sup>,</span>
-                <span class="author-block">
-                  <a href="https://zheda-mai.github.io/" target="_blank">Zheda Mai</a><sup></sup>,</span>
-                  <span class="author-block">
-                    <a href="https://a-f1.github.io/" target="_blank">Chongyu Fan</a></sup>,</span>
-                  </span>
-                  <span class="author-block">
-                    <a href="https://sites.google.com/view/wei-lun-harry-chao" target="_blank">Wei-Lun Chao</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">The Ohio State University, Michigan State University<br>ICML 2025 Workshop on Machine Unlearning for Generative AI</span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://openreview.net/forum?id=2FKAoAmYOj" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <!-- <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span> -->
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/justinhylee135/CUIG" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2511.07970" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>ICLR 2026</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <span class="external-link button is-normal is-rounded is-dark is-static" aria-disabled="true" style="pointer-events: none; opacity: 0.7;">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code Coming Soon</span>
                 </span>
-
-                <!-- ArXiv abstract Link -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a> -->
               </span>
             </div>
           </div>
@@ -124,42 +83,23 @@
   </div>
 </section>
 
-
-<!-- Main Figures -->
- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <figure class="image">
-            <img src="static/images/SecondaryFigure.jpg" alt="Main figure showing sequential vs simultaneous unlearning comparison">
-          </figure>
-          <h2 class="subtitle has-text-centered">
-            In real-world applications, unlearning requests often arrive <strong>sequentially</strong>. For example, when artists request the removal of their style or companies request the removal of copyrighted characters.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
     <div class="hero-body">
       <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <figure class="image">
-            <img src="static/images/MainFigure.png" alt="Main figure showing sequential vs simultaneous unlearning comparison">
+        <div class="column is-11">
+          <figure class="image figure-card">
+            <img class="paper-figure" src="static/images/unlearning_teaser_updated_cropped.png" alt="Continual unlearning teaser">
           </figure>
-          <h2 class="subtitle has-text-centered">
-            Unlearning a concept from the previously unlearned model checkpoint, leads to <strong>model degradation</strong>, the unintentional unlearning of other concepts. This occurs for unlearning both styles (left) and objects (right).
-          </h2>
+          <p class="figure-caption">
+            <strong>Continual Unlearning leads to rapid Utility Degradation.</strong> The first column shows outputs from the original model, and each following column shows the same model after additional unlearning requests. Red boxes indicate where the requested concept has been removed. Ideally, images without red boxes would remain unchanged, but as more requests are processed, unrelated concepts also degrades. By the final column, the model fails to generate any meaningful content (utility collapse).
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -167,41 +107,49 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Machine unlearning---the ability to remove designated concepts from a pre-trained model---has advanced swiftly. However, existing methods typically assume that unlearning requests arrive all at once, whereas in practice, they often occur sequentially. In this paper, we present the first systematic study of  <strong>continual unlearning</strong> in text-to-image generation. We show that popular unlearning methods suffer from rapid retention failures: after only a few requests, the model drastically forgets retained knowledge and produces degraded images. Our analysis attributes this behavior to cumulative parameter drift, which causes successive unlearned models to progressively diverge from the pre-training manifold. Motivated by this insight, we investigate add-on mechanisms that (1) mitigate drift and (2) crucially, remain compatible with existing unlearning methods. Extensive experiments demonstrate that constraining model updates and merging independently unlearned models are effective solutions, suggesting promising directions for future exploration. Taken together, our study positions continual unlearning as a fundamental problem in image generation, offering insights, accessible baselines, and open challenges to advance safe and accountable generative AI.
+            Machine unlearning—the ability to remove designated concepts from a pre-trained model—has advanced rapidly, particularly for text-to-image diffusion models. However, existing methods typically assume that unlearning requests arrive all at once, whereas in practice they often arrive sequentially. We present the first systematic study of <strong>continual unlearning</strong> in text-to-image diffusion models and show that popular unlearning methods suffer from <strong>rapid utility collapse</strong>: after only a few requests, models forget retained knowledge and generate degraded images. We trace this failure to cumulative parameter drift from the pre-training weights and argue that <strong>regularization is crucial</strong> to addressing it. To this end, we study a suite of add-on regularizers that (1) mitigate drift and (2) remain compatible with existing unlearning methods. Beyond generic regularizers, we show that <strong>semantic awareness</strong> is essential for preserving concepts close to the unlearning target, and propose a <strong>gradient-projection method</strong> that constrains parameter drift orthogonal to their subspace. This substantially improves continual unlearning performance and is <strong>complementary</strong> to other regularizers for further gains. Taken together, our study establishes continual unlearning as a fundamental challenge in text-to-image generation and provides insights, baselines, and open directions for advancing safe and accountable generative AI.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
 
-<!-- Section 1 -->
 <section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Sequential vs Simultaneous</h2>
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">Ideal Outcome in Continual Unlearning</h2>
+    <div class="columns is-centered">
+      <div class="column is-11 has-text-centered">
+        <figure class="image figure-card">
+          <img class="paper-figure" src="static/images/ideal_outcomes_updated.png" alt="Ideal outcomes in continual unlearning">
+        </figure>
+        <p class="figure-caption">
+          <strong>This figure defines what success should look like.</strong> When a concept is unlearned, only that concept should disappear; other concepts should remain intact. After the first unlearning step, the image for "Cartoon" should remain conceptually unchanged, while the image for "Van Gogh" should no longer exhibit the "Van Gogh" style. Following the second unlearning step, both the "Van Gogh" and "Cartoon" should be removed, while the concept "cat" should be retained.</p>
+      </div>
+    </div>
   </div>
 </section>
+
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">Continual Unlearning Suffers Rapid Utility Collapse</h2>
     <div class="columns is-centered">
-      <div class="column is-half has-text-centered">
-        <figure class="image">
-          <img src="static/images/ca_style_seq_vs_sim.jpg" alt="Style: Sequential vs Simultaneous Unlearning" style="max-width:100%;height:auto;">
+      <div class="column is-11 has-text-centered">
+        <figure class="image figure-card">
+          <img class="paper-figure" src="static/images/unlearning_motivation_ca_updated.png" alt="Continual unlearning benchmark results">
         </figure>
-        <p class="subtitle is-6">Unlearning 12 Styles</p>
-      </div>
-      <div class="column is-half has-text-centered">
-        <figure class="image">
-          <img src="static/images/ca_object_seq_vs_sim.jpg" alt="Object: Sequential vs Simultaneous Unlearning" style="max-width:100%;height:auto;">
-        </figure>
-        <p class="subtitle is-6">Unlearning 12 Objects</p>
+        <p class="figure-caption">
+            For both style (a) and object (b) unlearning, <strong>sequentially removing 12 concepts severely degrades utility (retention)</strong>. In contrast, restarting from the base model for each request and unlearning all requests simultaneously better preserve cross-domain knowledge (e.g., retaining objects after removing styles). However, simultaneous unlearning remains prohibitively expensive, as shown in the next figure.
+        </p>
       </div>
     </div>
     <div class="columns is-centered">
-      <div class="column has-text-centered">
-        <p class="is-size-5" style="margin-top: 1em;">
-          Unlearning sequentially leads to faster model degradation compared to unlearning simultaneously. Sequential unlearns from the previous checkpoint while simultaneous, restarts from the base model and unlearns all requests (previous + current).
+      <div class="column is-8 has-text-centered">
+        <figure class="image figure-card">
+          <img class="paper-figure paper-figure-compact" src="static/images/style_sim_train_cost_2.png" alt="Training cost comparison">
+        </figure>
+        <p class="figure-caption">
+          <strong>Simultaneous Unlearning is Prohibitively Expensive</strong> As unlearning requests accumulate, the total training steps grow superlinearly under simultaneous unlearning, while remaining near linear under sequential unlearning. We therefore analyze why simultaneous unlearning performs better (next figure), with the goal of improving sequential unlearning.
         </p>
       </div>
     </div>
@@ -209,221 +157,130 @@
 </section>
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">Cumulative Parameter Drift</h2>
     <div class="columns is-centered">
-      <div class="column is-half has-text-centered">
-        <figure class="image" style="max-width: 300px; margin: 0 auto;">
-          <img src="static/images/training_costs.png" alt="Training Costs" style="width:100%; height:auto;">
+      <div class="column is-11 has-text-centered">
+        <figure class="image figure-card">
+          <img class="paper-figure" src="static/images/unlearning_heatmap.png" alt="Parameter drift heatmap">
         </figure>
-        <p class="subtitle is-4">Simultaneous unlearning requires significantly more resources.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <figure class="image">
-            <img src="static/images/ca_object_map.png" alt="Main figure showing sequential vs simultaneous unlearning comparison">
-          </figure>
-            <h2 class="subtitle has-text-centered">
-            We find that simultaneous unlearning uses much smaller parameter updates. The x-axis shows the parameters updated during unlearning, with more red indicating a greater L2 distance from the base model parameters. This motivates us to explore methods that constrain update magnitude.
-            </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Section 2 -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Exploring Methods to Constrain Update Magnitude</h2>
-  </div>
-</section>
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <figure class="image">
-            <img src="static/images/ConstrainUpdateMethods.jpg" alt="Main figure showing sequential vs simultaneous unlearning comparison">
-          </figure>
-            <h2 class="subtitle has-text-centered">
-            Methods to constrain update magnitude. We explore regularizers (L1/L2) with respect to the previous checkpoint. Selective Finetuning which chooses a small subset of parameters to update based off one forward pass of the unlearning loss. TIES Model Merging which independently unlearns each request, prunes the checkpoint, and merges the weights.
-            </h2>
-        </div>
+        <p class="figure-caption">
+          As more concepts are removed, <strong>sequential unlearning incurs substantial cumulative parameter drift</strong> relative to the pretrained model, far greater than with simultaneous unlearning. We formalize the relationship between parameter drift and utility preservation in Section 5.2. We therefore benchmark different add-on regularizers that mitigate this drift, as illustrated in the next figure.
       </div>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container is-max-desktop">
-    <!-- First row -->
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">3. Add-On Regularizers</h2>
     <div class="columns is-centered">
-      <div class="column is-half has-text-centered">
-        <figure class="image">
-          <img src="static/images/initial_results_style.jpg" alt="Style: Sequential vs Simultaneous Unlearning" style="max-width:100%;height:auto;">
+      <div class="column is-11 has-text-centered">
+        <figure class="image figure-card">
+          <img class="paper-figure" src="static/images/unlearning_addons_updated.png" alt="Add-on regularizer overview">
         </figure>
-        <p class="subtitle is-6">Unlearning 12 Styles</p>
-      </div>
-      <div class="column is-half has-text-centered">
-        <figure class="image">
-          <img src="static/images/initial_results_object.jpg" alt="Object: Sequential vs Simultaneous Unlearning" style="max-width:100%;height:auto;">
-        </figure>
-        <p class="subtitle is-6">Unlearning 12 Objects</p>
-      </div>
-    </div>
-    <!-- Second row -->
-    <div class="columns is-centered">
-      <div class="column is-half has-text-centered">
-        <figure class="image">
-          <img src="static/images/Style_Qual.jpg" alt="Qualitative Results: Styles" style="max-width:100%;height:auto;">
-        </figure>
-        <p class="subtitle is-6">Qualitative Results: Styles</p>
-      </div>
-      <div class="column is-half has-text-centered">
-        <figure class="image">
-          <img src="static/images/Object_Qual.jpg" alt="Qualitative Results: Objects" style="max-width:100%;height:auto;">
-        </figure>
-        <p class="subtitle is-6">Qualitative Results: Objects</p>
+        <p class="figure-caption">
+          We provide baselines with three <strong>plug-and-play add-on regularizers, compatible with existing unlearning methods</strong>, to constrain parameter drift. (a) L1/L2 penalizes the norm of the parameter update relative to the previous checkpoint. (b) Selective Fine-tuning restricts updates to the top-k% most important parameters. (c) Model merging unlearns each concept independently and then combines the resulting models.        </p>
       </div>
     </div>
     <div class="columns is-centered">
-      <div class="column has-text-centered">
-        <p class="is-size-5" style="margin-top: 1em;">
-          We see strong improvements to retaining the cross-domain. When unlearning style we do well retaining objects and vice versa. It seems disentangling concepts within the same domain is a harder challenge.
+      <div class="column is-11 has-text-centered">
+        <figure class="image figure-card">
+          <img class="paper-figure" src="static/images/unlearning-addon-ca_updated.png" alt="Add-on regularizer results">
+        </figure>
+        <p class="figure-caption">
+          <strong>Add-on Regularizers Improve Retention.</strong> Compared with baseline sequential unlearning, all add-on regularizers improve utility preservation. Retaining concepts within the same domain, for example other styles when removing styles, remains far more challenging than preserving cross-domain concepts, for example objects when removing styles. Our newly proposed regularizer (Grad Proj) achieves the strongest in-domain retention by accounting for semantic interference, with details shown in the next figure.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 3-->
 <section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Developing New Methods</h2>
-  </div>
-</section>
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <figure class="image">
-            <img src="static/images/cosine_similarity.png" alt="Main figure showing sequential vs simultaneous unlearning comparison">
-          </figure>
-            <h2 class="subtitle has-text-centered">
-            Unlearning methods typically update just the cross attention layers to minimize model degradation. Understanding that cross-attention is the relationship between text and images, we find that text embedding cosine similarity with the target concept (e.g. Abstractionism Style) is a strong indicator for which concepts will be unintentionally unlearned.
-            </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <figure class="image">
-            <img src="static/images/gradient_projection.jpg" alt="Main figure showing sequential vs simultaneous unlearning comparison">
-          </figure>
-            <h2 class="subtitle has-text-centered">
-            We develop a new method that builds a text embedding subspace of concepts we want to retain. Then we project the unelarning gradient to be orthogonal to this subspace. This allows us to unlearn the target concept while retaining the concepts we want to keep.
-            </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">4. Semantic-Aware Gradient Projection</h2>
     <div class="columns is-centered">
-      <div class="column is-half has-text-centered">
-        <figure class="image">
-          <img src="static/images/style_grad_project.png" alt="Style: Sequential vs Simultaneous Unlearning" style="max-width:100%;height:auto;">
+      <div class="column is-6 has-text-centered">
+        <figure class="image figure-card">
+          <img class="paper-figure" src="static/images/unlearning_ira_vs_cosine.png" alt="Figure 7a retention versus semantic similarity">
         </figure>
-        <p class="subtitle is-6">Unlearning 12 Styles</p>
+        <p class="figure-caption">
+          <strong>Semantically Similar Concepts are Harder to Preserve.</strong> Concepts with greater text-embedding cosine similarity to the unlearned concepts (e.g., "Abstractionism" style) experience greater utility degradation.
       </div>
-      <div class="column is-half has-text-centered">
-        <figure class="image">
-          <img src="static/images/object_grad_project.png" alt="Object: Sequential vs Simultaneous Unlearning" style="max-width:100%;height:auto;">
+      <div class="column is-6 has-text-centered">
+        <figure class="image figure-card">
+          <img class="paper-figure" src="static/images/unlearning_cosine_vs_kvnorm.png" alt="Figure 7b parameter update versus semantic similarity">
         </figure>
-        <p class="subtitle is-6">Unlearning 12 Objects</p>
+        <p class="figure-caption">
+          <strong>Change in Cross-Attention Keys and Values Increases with Semantic Similarity</strong> In UNet diffusion models, cross-attention captures the relationship between text prompts (k, v) and image features (q). As text embedding cosine similarity increases, the k and v outputs become more distorted. 
+        </p>
       </div>
     </div>
     <div class="columns is-centered">
-      <div class="column has-text-centered">
-        <p class="is-size-5" style="margin-top: 1em;">
-          Using our projection method we see strong improvements to retaining within-domain concepts.
+      <div class="column is-11 has-text-centered">
+        <figure class="image figure-card">
+          <img class="paper-figure" src="static/images/unlearning_proj_updated.png" alt="Gradient projection analysis and method">
+        </figure>
+        <p class="figure-caption">
+          <strong>Gradient Projection</strong> Motivated by these findings, we project the gradients of the key and value matrices to be orthogonal to concepts with high text-embedding cosine similarity to the concept to be learned, achieving the strongest in-domain utility preservation among all regularizers.  </p>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-11 has-text-centered">
+        <figure class="image figure-card">
+          <img class="paper-figure" src="static/images/unlearning-complementary.png" alt="Complementarity of methods">
+        </figure>
+        <p class="figure-caption">
+          <strong>Add on Regularizers Are Combinable.</strong> Gradient Projection can be combined with other add-on regularizers, such as selective fine-tuning, to achieve further performance gains.        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 4-->
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/CUIG_ICML_Workshop_Poster.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Future Work</h2>
+    <div class="content has-text-justified">
+      <p>
+        Understanding how robustness to adversarial recovery attacks evolves across sequential
+        unlearning steps is critical for safe deployment, particularly as it remains unclear whether these
+        challenges compound differently across architectures (e.g., DiT), training objectives (e.g., flow
+        matching), and modalities (e.g., video, speech) beyond diffusion-based image generation. While
+        our plug-and-play regularizers provide a strong foundation, designing natively sequential unlearning
+        methods that anticipate future requests and account for their interactions is a natural next step toward
+        further advancing continual unlearning.
+      </p>
     </div>
-  </section>
-<!--End paper poster -->
+  </div>
+</section>
 
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{lee2025empirical,
-  title={An Empirical Exploration of Continual Unlearning for Image Generation},
-  author={Lee, Justin and Mai, Zheda and Fan, Chongyu and Chao, Wei-Lun},
-  booktitle={ICML 2025 Workshop on Machine Unlearning for Generative AI}
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{lee2026continual,
+  title={Continual Unlearning for Text-to-Image Diffusion Models: A Regularization Perspective},
+  author={Lee, Justin and Mai, Zheda and Yoo, Jinsu and Fan, Chongyu and Zhang, Cheng and Chao, Wei-Lun},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2026}
 }</code></pre>
-    </div>
+  </div>
 </section>
-<!--End BibTex citation -->
 
-
-  <footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>,
+            adapted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>

@@ -133,5 +133,53 @@ body {
   font-size: smaller;
 }
 
+.figure-card {
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.paper-figure {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.paper-figure-compact {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.figure-caption {
+  margin: 0.9rem auto 0;
+  max-width: 1200px;
+  font-size: 1.03rem;
+  line-height: 1.6;
+  color: #1f1f1f;
+  text-align: left;
+}
+
+.section-guide {
+  margin: 0 auto;
+  max-width: 1050px;
+  font-size: 1.05rem;
+  color: #303030;
+  line-height: 1.55;
+}
+
+@media screen and (max-width: 768px) {
+  .figure-caption {
+    font-size: 0.96rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .section-guide {
+    font-size: 0.95rem;
+  }
+}
 
 
